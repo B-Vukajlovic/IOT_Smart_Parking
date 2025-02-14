@@ -1,0 +1,155 @@
+:root {
+    --clr-dark: #191C24;
+    --clr-white: #d1fae5;
+    --clr-primary: #047857;
+    --clr-primarydark: #065f46;
+    --clr-primarydarker: #064e3b;
+    --clr-primarylight: #D3F8DF;
+    --clr-secondary: ;
+}
+
+* {
+    margin: 0;
+    line-height: calc(1em + .5rem);
+    overflow: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Coolvetica', sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 3vh;
+
+}
+
+.title {
+    font-family: "Technor";
+    top: 3vh;
+    position: absolute;
+    z-index: 5;
+    color: var(--clr-primarylight)
+}
+
+.gradient {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    background: radial-gradient(ellipse, var(--clr-primarydark) -30%, var(--clr-dark) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 75%;
+    height: 75%;
+    background-color: #0d100ed8;
+    border-radius: 3vw;
+    backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    position: absolute
+}
+
+.main-item1 {
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.main-item2 {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child-item1 {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 90%;
+    gap: 1vh;
+    padding: 5vh;
+}
+
+.child-item2 {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 90%;
+    gap: 1vh;
+    padding: 5vh;
+}
+
+.desctxt {
+    color: var(--clr-white);
+    size: 4vw;
+    text-transform: capitalize;
+}
+
+.count-txt {
+    font-family: "Akira Expanded";
+    font-size: 16vw;
+    color: #0f1514;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(40deg, var(--clr-primary), var(--clr-primarylight), var(--clr-primary), var(--clr-primarylight));
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 8px transparent;
+}
+
+.parking-wrapper {
+    width: 60%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.parking-row {
+    border-left: 2px solid var(--clr-primarylight);
+    border-top: 2px solid var(--clr-primarylight);
+    border-bottom: 2px solid var(--clr-primarylight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.parking-row .car {
+    position: absolute;
+    left: 100%;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.parking-row .car.visible {
+    left: 20%;
+    opacity: 1;
+    z-index: 3;
+}
+
+.p {
+    width: 150px;
+    height: 150px;
+}
+
+@font-face {
+    font-family: "Technor";
+    src: url('/static/Technor-Variable.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

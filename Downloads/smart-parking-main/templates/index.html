@@ -1,0 +1,55 @@
+<!--
+ - Names: B. Vukajlovic; M. Bellari; I. Ouhamcha
+ - UvAnetIDs: 15225054; 14675218; 13690930
+ - Study: BSc Informatica
+ -
+ - This file is the template for the index page of the Smart Parking
+ - web application. It displays the latest sensor data.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parking Sensor Data</title>
+</head>
+<body>
+    <h1>Parking Sensor Data</h1>
+    {% if latest_data %}
+    <table border="1">
+        <tr>
+            <th>Sensor</th>
+            <th>Distance</th>
+            <th>LED Status</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>{{ latest_data.distance1 }}</td>
+            <td>{{ latest_data.ledStatus1 }}</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>{{ latest_data.distance2 }}</td>
+            <td>{{ latest_data.ledStatus2 }}</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>{{ latest_data.distance3 }}</td>
+            <td>{{ latest_data.ledStatus3 }}</td>
+        </tr>
+        <tr>
+            <td colspan="2">Free Spaces</td>
+            <td>{{ latest_data.freeSpaces }}</td>
+        </tr>
+    </table>
+    {% else %}
+    <p>No sensor data available.</p>
+    {% endif %}
+
+    <h2>Errors</h2>
+    <ul>
+        {% for error in errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
