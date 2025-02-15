@@ -25,15 +25,12 @@ This repository demonstrates a simple **smart parking** solution integrating:
 ## How to Run
 1. **Flask Server**  
    - python app.py
-    Access at http://localhost:5000.
+   - Access at http://localhost:5000.
 
-    - PyQt App
-    python test.py
-     GUI for manual spot entry and quick visual feedback.
-    - Arduino
-        Open and upload ino_a1.ino and ino_a2.ino in the Arduino IDE on two seperate Arduino's.
-        Adjust threshold distances, pin connections as needed.
+2. **Arduino**  
+   - Open and upload ino_a1.ino and ino_a2.ino in the Arduino IDE on two seperate Arduino's.
+   - Adjust threshold distances, pin connections as needed.
 
-Notes
-    For networking, Arduino can communicate via Wi-Fi/Ethernet shield or serial.
+## Notes
+For networking, Arduino can communicate via Wi-Fi/Ethernet shield or serial.
 """
