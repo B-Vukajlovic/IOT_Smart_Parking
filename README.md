@@ -1,7 +1,6 @@
-"""
 # Smart Parking System
 
-This repository demonstrates a simple **smart parking** solution integrating:
+This repository demonstrates a **smart parking** solution integrating:
 - **Arduino sensors** that measure distances to determine spot occupancy.
 - **Flask web server** (`app.py`) to receive and display sensor data.
 - **PyQt** desktop interface (`test.py` + `parking_ui.py`) for local monitoring.
@@ -33,4 +32,3 @@ This repository demonstrates a simple **smart parking** solution integrating:
 
 ## Notes
 For networking, Arduino can communicate via Wi-Fi/Ethernet shield or serial.
-"""
